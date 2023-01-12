@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using PaymentAPI.Models;
@@ -49,10 +49,6 @@ namespace PaymentAPI.Controllers
             return Ok(response);
         }
 
-        [HttpGet("getrewards/{id}")]
-        public async Task<List<TransactionDetails>> GetRewardForAllCutomer(int id)
-        {
-            return await __customerService.getTransactionByCustomerId(_context, id);
-        }
+        
     }
 }
